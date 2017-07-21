@@ -6,11 +6,12 @@ CVS=0
 
 from setuptools import setup, find_packages
 import os
+from io import open
 
 def read(*rnames):
     return "\n"+ open(
-        os.path.join('.', *rnames)
-    ).read()
+        os.path.join('.', *rnames),
+        encoding='utf-8').read()
 url="https://github.com/kiorky/SOAPpy.git"
 long_description="SOAPpy provides tools for building SOAP clients and servers.  For more information see " + url\
     +'\n'+read('README.txt')\
